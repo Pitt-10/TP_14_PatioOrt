@@ -5,8 +5,15 @@ using UnityEngine;
 public class playerCollision : MonoBehaviour
 {
 
-    int score = 0;
+    
+    private UIManager uiManager;
 
+    public int score = 0;
+
+    private void Awake()
+    {
+        uiManager = FindObjectOfType<UIManager>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +35,7 @@ public class playerCollision : MonoBehaviour
 
             Debug.Log("Objetos recojidos: " + score);
 
+            uiManager.UpdateScore(score);
 
         Destroy(col.gameObject);
         }
