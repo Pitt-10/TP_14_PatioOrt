@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class gameManager : MonoBehaviour
 {
     public float timer = 60f;
 
     private UIManager uiManager;
+
+    private bool JuegoFinalizado = false;
 
     private void Start()
     {
@@ -16,11 +19,39 @@ public class gameManager : MonoBehaviour
 
     private void Update()
     {
-        if (timer > 0)
+        if (!JuegoFinalizado)
         {
-            timer -= Time.deltaTime;
+        if (timer > 0)
+            {
+                timer -= Time.deltaTime;
 
+                uiManager.UpdateTimer(timer);
+            }
+        
+        else
+        {
+            timer = 0;
             uiManager.UpdateTimer(timer);
+
+            JuegoFinalizado = true;
+
+            uiManager.GameOverPanel();
+
+            Time.timeScale = 0f;
+        }
+
+        }
+    
+     if (JuegoFinalizado && Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
+
+    public void FinalizarJuego()
+    {
+        JuegoFinalizado = true;
+    }
+
+    
 }
