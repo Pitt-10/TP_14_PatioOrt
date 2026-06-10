@@ -2373,7 +2373,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4281152049
-  m_fontColor: {r: 0.19560412, g: 0.1981132, b: 0.17848878, a: 1}
+  m_fontColor: {r: 1, g: 0.94493365, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -9968,6 +9968,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
+  maxScore: 5
 --- !u!1 &1941951832
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,12 +7,15 @@ public class playerCollision : MonoBehaviour
 
     
     private UIManager uiManager;
+    private gameManager gameManager;
 
     public int score = 0;
+    public int maxScore = 5;
 
     private void Awake()
     {
         uiManager = FindObjectOfType<UIManager>();
+        gameManager = FindObjectOfType<gameManager>();
     }
 
     // Start is called before the first frame update
@@ -38,6 +41,15 @@ public class playerCollision : MonoBehaviour
             uiManager.UpdateScore(score);
 
         Destroy(col.gameObject);
+        }
+
+        if (score >= maxScore)
+        {
+            uiManager.YouWinPanel();
+
+            gameManager.FinalizarJuego();
+
+            Time.timeScale = 0f;
         }
 
     }
