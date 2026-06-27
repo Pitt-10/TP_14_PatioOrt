@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class gameManager : MonoBehaviour
 {
@@ -38,15 +39,16 @@ public class gameManager : MonoBehaviour
 
             uiManager.GameOverPanel();
 
+            FindObjectOfType<FirstPersonController>().enabled = false;
+
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+
             Time.timeScale = 0f;
         }
 
         }
     
-     if (JuegoFinalizado && Input.GetKeyDown(KeyCode.R))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
     }
 
     public void FinalizarJuego()
@@ -54,5 +56,10 @@ public class gameManager : MonoBehaviour
         JuegoFinalizado = true;
     }
 
+    public void ReiniciarJuego()
+    {
+        
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);    }
     
 }

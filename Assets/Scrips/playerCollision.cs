@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class playerCollision : MonoBehaviour
 {
@@ -12,10 +13,15 @@ public class playerCollision : MonoBehaviour
     public int score = 0;
     public int maxScore = 5;
 
+    FirstPersonController fps;
+
+
     private void Awake()
     {
         uiManager = FindObjectOfType<UIManager>();
         gameManager = FindObjectOfType<gameManager>();
+
+        fps = FindObjectOfType<FirstPersonController>();
     }
 
     // Start is called before the first frame update
@@ -48,6 +54,11 @@ public class playerCollision : MonoBehaviour
             uiManager.YouWinPanel();
 
             gameManager.FinalizarJuego();
+
+            fps.enabled = false;
+
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
 
             Time.timeScale = 0f;
         }
