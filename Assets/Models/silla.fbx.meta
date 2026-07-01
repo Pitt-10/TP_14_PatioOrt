@@ -1,15 +1,20 @@
 fileFormatVersion: 2
-guid: 6e9ecfe512d74724daeec17e73befab7
+guid: 3f97f211fa5f53b4c8d7670eba69729c
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: obstaculo
+    2100000: silla
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: silla
+    second: {fileID: 2100000, guid: 6ee123f1ea4d41346874838151254fa0, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
