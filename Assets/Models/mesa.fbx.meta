@@ -5,12 +5,21 @@ ModelImporter:
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: No Name
-    2100002: Material.001
+    2100000: mesaTexture
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mesaTexture
+    second: {fileID: 2100000, guid: 69007595345026e48a0471438777e85e, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ChatGPT Image 17 jun 2026, 08_16_09
+    second: {fileID: 2800000, guid: 08d23c771eb3428419b92f41d1806fa5, type: 3}
   materials:
     importMaterials: 1
     materialName: 0
