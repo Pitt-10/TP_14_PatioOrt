@@ -11,7 +11,7 @@ public class playerCollision : MonoBehaviour
     private gameManager gameManager;
 
     private int score = 0;
-    private int maxScore = 7;
+    private int maxScore = 8;
 
     FirstPersonController fps;
 
