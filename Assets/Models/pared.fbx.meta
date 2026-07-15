@@ -1,27 +1,25 @@
 fileFormatVersion: 2
-guid: df49e4f8b1830e64dbc695cf18d69ae3
+guid: aacd799b0bdec0f47bd680da004e3dde
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Cube
-    100002: Cube.001
-    100004: Cube.002
-    100006: //RootNode
-    400000: Cube
-    400002: Cube.001
-    400004: Cube.002
-    400006: //RootNode
-    2100000: No Name
-    2300000: Cube
-    2300002: Cube.001
-    2300004: Cube.002
-    3300000: Cube
-    3300002: Cube.001
-    3300004: Cube.002
-    4300000: Cube.001
-    4300002: Cube.002
-    4300004: Cube
-  externalObjects: {}
+    100000: //RootNode
+    400000: //RootNode
+    2100000: ladrillo
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Cube
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ladrillo
+    second: {fileID: 2100000, guid: 066b80d94e9d9a649a14f8781795c68f, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ChatGPT Image 28 jun 2026, 19_51_05
+    second: {fileID: 2800000, guid: 31ce0127d34195249b985186a3d0d20d, type: 3}
   materials:
     importMaterials: 1
     materialName: 0
